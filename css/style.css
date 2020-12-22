@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.menu {
+    background-color: rgb(4, 36, 52);
+    height: 50px;
+    color: white;
+    display: flex;
+    font-size: 20px;
+    padding: 15px;
+}
+.menu__logo {
+    width: 90%;
+    align-self: center;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+.menu__misc {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    text-align: center;
+    border-left: 2px solid white;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    background: url("https://casa.org/wp-content/uploads/2020/09/bookshelf-of-library-books-mural-wallpaper.jpeg");
+    background-size: cover;
+}
+.search__area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+}
+.search__area input {
+    padding: 20px;
+    background-color: rgb(4, 36, 52);
+    color: white;
+    border: 1px solid rgb(4, 36, 52);
+    transition: ease-in-out 0.3s;
+}
+#searchLabel {
+    background: white;
+    width: 60%;
+    border-radius: 7px 0 0 7px;
+    color: black;
+    box-shadow: 2px 2px 50px black;
+}
+.wrapper {
+    width: 70%;
+    margin: 3% auto;
+    min-width: 0;
+}
+#searchBtn:hover {
+    background: rgb(30, 62, 78);
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+.quote {
+    margin: 0;
+    background: #eee;
+    padding: 1em;
+    border-radius: 1em;
+
+    font: 1.2rem/1.4 Georgia, serif;
+}
+.quote .quote__author,
+.quote blockquote {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+.slider {
+
+}
+
+
+/*HOVER EL*/
+.hover_underline::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: black;
+    transition: width .30s;
+}
+.hover_underline:hover::after {
+    /*transition: ease-in-out 2ms;*/
+    width: 100%;
+}
+.swiper-slide {
+    font-size: 18px;
+    background-color: rgb(4, 36, 52);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    height: 300px;
+    background-color: rgb(4, 36, 52);
+    /*margin: 50px;*/
+    border-radius: 10px;
+}
+.slider__book_img {
+    width: 121px;
+    height: 176px;
+    background: chartreuse;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+}
+.swiper-button-prev {
+    padding: 10px;
+    border-radius: 100px;
+    background: rgb(4, 36, 52);
+}
+.swiper-button-next {
+    padding: 10px;
+    border-radius: 100px;
+    background: rgb(4, 36, 52);
+}
+.showcase {
+    width: 100%;
+    height: 400px;
+    font-family: 'Roboto', sans-serif;
+}
+.block {
+    width: 100%;
+    height: 100vh;
+    background: rgb(4, 36, 52);
+    display: flex;
+    flex-direction: column;
+}
+.block__photos {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+..block__photos__text {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.ph1 {
+    width: 245px;
+    border-radius: 10px;
+    height: 385px;
+    background-image: url("../img/1.jpg");
+    background-size: cover;
+    margin: 0 2%;
+}
+.ph2 {
+    width: 245px;
+    border-radius: 10px;
+    height: 385px;
+    background-image: url("../img/2.jpg");
+    background-size: cover;
+    margin: 0 2%;
+}
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 40%;
+    flex-wrap: wrap;
+    background: rgb(4, 36, 52);
+}
+.footer_card {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.footer_card h1 {
+    margin: 0;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 20px 0px 5px 0px;
+    color: rgba(255,255,255,0.2);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.250em;
+}
+.footer_card ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.footer_card ul li {
+    color: #999999;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+}
+
+.footer_card ul li:hover {
+    color: #ffffff;
+    transition: 0.1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+}
+.helper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*flex-wrap: wrap;*/
+}
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background: rgb(4, 36, 52);
+}
+@media screen and (max-width: 657px) {
+    .wrapper {
+        width: 90%;
+    }
+    .menu__logo {
+        width: 80%;
+    }
+    .menu__misc {
+        width: 20%;
+    }
+    .search__area {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 580px) {
+    .ph1 {
+        width: 122px;
+        height: 193px;
+    }
+    .ph2 {
+        width: 122px;
+        height: 193px;
+    }
+    .block__photos {
+        height: 50%;
+    }
+    .footer {
+        height: 50%;
+    }
+    .footer_card {
+        width: 33%;
+        justify-content: center;
+    }
+    .footer_card h1 {
+        font-size: 14px;
+    }
+    .footer_card ul li {
+        font-size: 13px;
+    }
+}
+@media screen and (max-height: 700px) {
+    .block__photos {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    /*.block{*/
+    /*    margin: 30px 0;*/
+    /*    padding: 30% 0;*/
+    /*}*/
+    .ph1 {
+        width: 122px;
+        height: 193px;
+    }
+    .ph2 {
+        width: 122px;
+        height: 193px;
+    }
+    .block__photos__text {
+        font-size: 10px;
+    }
+}
