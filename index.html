@@ -9,10 +9,30 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
+<div class="profile">
+    <div class="profile__start">
+        <p>ABUBAKIR JARYLGAPOV</p>
+    </div>
+    <div class="profile__mid">
+        <p>Settings</p>
+        <p>History</p>
+        <p>Promo code</p>
+    </div>
+    <div class="profile__end">
+        <p id="close">Close</p>
+    </div>
+</div>
+<div class="profile">
+    <div class="profile__start"></div>
+    <div class="profile__mid">No items in cart</div>
+    <div class="profile__end">
+        <p id="close">Close</p>
+    </div>
+</div>
 <body>
     <div class="menu">
         <div class="menu__logo">Libreous</div>
-        <div class="menu__misc"><i class="far fa-user-circle"></i><i class="fas fa-shopping-cart"></i></div>
+        <div class="menu__misc"><i class="far fa-user-circle" id="profileBtn"></i><a href="http://localhost:63342/project2/cart.html?_ijt=picc5697drb3vajtec5rijfk0o"> <i class="fas fa-shopping-cart"></i> </a></div>
     </div>
 
     <div class="search">
@@ -34,7 +54,8 @@
             </div>
         </div>
         <div class="showcase">
-            <h1>Top month</h1>
+            <h1 class="text_title">Top month</h1>
+            <p class="text_description">Users favourite books this month</p>
             <div class="slider swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -137,7 +158,8 @@
             </div>
         </div>
         <div class="showcase">
-            <h1>New books</h1>
+            <h1 class="text_title">New books</h1>
+            <p class="text_description">Read newest books!</p>
             <div class="slider swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -240,7 +262,8 @@
             </div>
         </div>
         <div class="showcase">
-            <h1>Must to read</h1>
+            <<h1 class="text_title">Must to read</h1>
+            <p class="text_description">Every book reader must to read</p>
             <div class="slider swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -344,71 +367,7 @@
         </div>
     </div>
     <div class="block">
-        <div class="block__photos">
-            <div class="block__photos__text">
-                <h1>Check out our application and read books on your phones
-                </h1>
-                <p>Get application via google play and apple store</p></div>
-            <div class="helper">
-                <div class="ph1"></div>
-                <div class="ph2"></div>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="wrapper">
-                <div class="cards">
-                    <div class="footer_card">
-                        <h1>Company</h1>
-                        <ul>
-                            <li>About</li>
-                            <li>Feedback</li>
-                            <li>About</li>
-                            <li>Feedback</li>
-                            <li>About</li>
-                            <li>Feedback</li>
-                        </ul>
-                    </div>
-                    <div class="footer_card">
-                        <h1>Books</h1>
-                        <ul>
-                            <li>About</li>
-                            <li>Feedback</li>
-                            <li>About</li>
-                            <li>Feedback</li>
-                            <li>About</li>
-                            <li>Feedback</li>
-                        </ul>
-                    </div>
-                    <div class="footer_card">
-                        <h1>Audiobooks</h1>
-                        <ul>
-                            <li>About</li>
-                            <li>Feedback</li>
-                            <li>About</li>
-                            <li>Feedback</li>
-                            <li>About</li>
-                            <li>Feedback</li>
-                        </ul>
-                    </div>
-                    <div class="footer_card">
-                        <h1>Get help</h1>
-                        <ul>
-                            <li>Contact us</li>
-                            <li>Chat</li>
-                            <li>Write ticket</li>
-                        </ul>
-                    </div>
-                    <div class="footer_card">
-                        <h1>Social</h1>
-                        <ul>
-                            <li>VK</li>
-                            <li>YT</li>
-                            <li>FB</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
