@@ -58,3 +58,21 @@ close.addEventListener('click', ()=> {
     profile.style.width = "0px";
     document.body.style.overflow = "visible";
 })
+
+
+
+var firebaseConfig = {
+    apiKey: "AIzaSyCgwLWM2HKEFYYebuICF_QgHbJ9NYZs9G4",
+    authDomain: "libreous-b419b.firebaseapp.com",
+    projectId: "libreous-b419b",
+    storageBucket: "libreous-b419b.appspot.com",
+    messagingSenderId: "1032866008484",
+    appId: "1:1032866008484:web:d5749dc17698f3f8fc4531"
+  };
+firebase.initializeApp(firebaseConfig);
+
+const dbRef = firebase.database().ref();
+const usersRef = dbRef.child('users');
+
+// usersRef.on("child_added",)
+  
