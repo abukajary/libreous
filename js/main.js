@@ -41,22 +41,22 @@ let profileBtn = document.getElementById('profileBtn')
 let profile = document.querySelector('.profile')
 let close = document.getElementById('close')
 let isProfile = false
+let profileParams = (width, overflow, t_color) => {
+    profile.style.width = width;
+    document.body.style.overflow = overflow;
+    profileBtn.style.color = t_color;
+}
 profileBtn.addEventListener('click', ()=> {
     if (isProfile) {
-        profile.style.width = "0px";
-        document.body.style.overflow = "visible";
-        profileBtn.style.color = "white";
+        profileParams("0px", "visible", "white")
         isProfile = false;
     } else {
-        profile.style.width = "30vw";
-        document.body.style.overflow = "hidden";
-        profileBtn.style.color = "#e68836";
+        profileParams("30vw", "hidden", "#e68836")
         isProfile = true;
     }
 })
 close.addEventListener('click', ()=> {
-    profile.style.width = "0px";
-    document.body.style.overflow = "visible";
+    profileParams("0px", "visible", "white")
 })
 
 

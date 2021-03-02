@@ -31,6 +31,7 @@ nav {
     height: 158px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     background: #EAE8E8;
     border-radius: 18px;
@@ -145,10 +146,38 @@ nav {
     .item, .payment {
         width: 90vw;
     }
+    .item__info {
+        flex-direction: row;
+        width: 77%;
+    }
+    .item__detail {
+        width: 23%;
+    }
 }
 @media screen and (max-width: 600px) {
     .payment {flex-direction: column}
-    .payment__info {
+    .payment__info, .payment__promoCode input{
         width: 80vw;
     }
+    *, .item__info__left__author, .item__info__right p, .item__detail__price, .item__info__left__name h5 {
+        font-size: 3vw;
+        /*padding: 0;*/
+    }
+    .item__info__left__name p {display: none}
+    .item__info {
+        flex-direction: column;
+        width: 50%;
+    }
+    .item__detail {
+        width: 50%;
+    }
+    .item__info__left, .item__info__right__quantity, .item__info__right p {
+        margin: 0;
+        width: 90%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+@media screen and (max-width: 350px) {
+
 }
