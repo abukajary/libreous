@@ -159,6 +159,8 @@ body {
     height: 176px;
     background: white;
     text-align: center;
+    background-size: cover;
+    background-position: center;
     color: black;
     border-radius: 10px;
 }
