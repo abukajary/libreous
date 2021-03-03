@@ -58,6 +58,13 @@ profileBtn.addEventListener('click', ()=> {
 close.addEventListener('click', ()=> {
     profileParams("0px", "visible", "white")
 })
+//SHOW PROFILE
+// SEARCH
+let searchBtn = document.getElementById('searchBtn')
+searchBtn.addEventListener('click', ()=> {
+    window.location.href = "search.html";
+})
+// SEARCH
 
 
 
@@ -86,8 +93,8 @@ dbRef.on("value", function(snapshot) {
                     <div class="slider__book_img" style="background-image: url(${element.image_url})">
                         
                     </div>
-                    <p>Book name: ${element.name} </p>
-                    <p>Book author:${element.author} 1</p>
+                    <p class="book_name">${element.name} </p>
+                    <p class="book_author">${element.author}</p>
                 </div>
 
             </div>
@@ -134,8 +141,8 @@ function sortByDate(){
                     <div class="slider__book_img" style="background-image: url(${element.image_url})">
                         
                     </div>
-                    <p>Book name: ${element.name} </p>
-                    <p>Book author:${element.author} 1</p>
+                    <p class="book_name">${element.name} </p>
+                    <p class="book_author">${element.author}</p>
                 </div>
 
             </div>
@@ -161,8 +168,8 @@ function sortByRaiting(){
                     <div class="slider__book_img" style="background-image: url(${element.image_url})">
                         
                     </div>
-                    <p>Book name: ${element.name} </p>
-                    <p>Book author:${element.author} 1</p>
+                    <p class="book_name">${element.name} </p>
+                    <p class="book_author">${element.author}</p>
                 </div>
 
             </div>
