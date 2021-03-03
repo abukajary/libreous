@@ -61,9 +61,11 @@ close.addEventListener('click', ()=> {
 //SHOW PROFILE
 // SEARCH
 let searchBtn = document.getElementById('searchBtn')
-searchBtn.addEventListener('click', ()=> {
-    window.location.href = "search.html";
-})
+if(searchBtn != null)
+    searchBtn.addEventListener('click', ()=> {
+        window.location.href = "search.html";
+    })
+
 // SEARCH
 
 
@@ -82,27 +84,54 @@ const dbRef = firebase.database().ref("books");
 const container = document.getElementsByClassName("swiper-wrapper")[0]
 let date_array = []
 let raiting_array = []
+let search_array = []
 dbRef.on("value", function(snapshot) {
     const container = document.getElementsByClassName("swiper-wrapper")[0]
+    let exist = container !== undefined ? true : false;
     snapshot.val().forEach(element => {
         date_array.push(element)
         raiting_array.push(element)
-        container.insertAdjacentHTML('beforeend',`
-            <div class="swiper-slide">
-                <div class="slider__info">
-                    <div class="slider__book_img" style="background-image: url(${element.image_url})">
-                        
+        search_array.push(element)
+        if(exist) {
+            container.insertAdjacentHTML('beforeend',`
+                <div class="swiper-slide">
+                    <div class="slider__info">
+                        <div class="slider__book_img" style="background-image: url(${element.image_url})">
+                            
+                        </div>
+                        <p class="book_name">${element.name} </p>
+                        <p class="book_author">${element.author}</p>
                     </div>
-                    <p class="book_name">${element.name} </p>
-                    <p class="book_author">${element.author}</p>
-                </div>
 
-            </div>
-        `) 
+                </div>
+            `) 
+        }
+        else{
+            let el = document.getElementById("objects")
+
+            el.insertAdjacentHTML('beforeend',`
+                <div class="item">
+                    <div class="item__photo" style="background-image:url(${element.image_url})"></div>
+                    <div class="item__info">
+                        <div class="item__info__left">
+                            <div class="item__info__left__name">
+                                <h5>${element.name}</h5>
+                                <p>${element.description}</p>
+                            </div>
+                            <div class="item__info__left__author">
+                                ${element.author}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `)
+        }
     });  
-    sortByRaiting()
-    sortByDate()
-    callSlider()
+    if(exist){
+        sortByRaiting()
+        sortByDate()
+        callSlider()
+    }
   }, function (errorObject) {
     console.log("The read failed: " + errorObject.code);
   });
@@ -178,6 +207,9 @@ function sortByRaiting(){
 }
 
 function callSlider(){
+    if(typeof Swiper === "undefined"){
+        return;
+    }
     new Swiper('.swiper-container', {
         navigation: {
             nextEl: '.swiper-button-next',
@@ -215,3 +247,53 @@ function callSlider(){
         freeMode: true,
     });
 }
+
+let search = document.querySelector(".search input[type=search]")
+let btn = document.querySelector(".search input[type=submit]")
+btn.addEventListener("click",function(e){
+    e.preventDefault()
+    let el = document.getElementById("objects")
+
+    el.innerHTML = ""
+
+    if(search.value === '')
+        search_array.forEach(element => {
+            el.insertAdjacentHTML('beforeend',`
+                <div class="item">
+                    <div class="item__photo" style="background-image:url(${element.image_url})"></div>
+                    <div class="item__info">
+                        <div class="item__info__left">
+                            <div class="item__info__left__name">
+                                <h5>${element.name}</h5>
+                                <p>${element.description}</p>
+                            </div>
+                            <div class="item__info__left__author">
+                                ${element.author}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `)
+        })
+    if(search.value === '') return;
+    search_array.forEach(element => {
+        let name = element.name
+        if(!name.includes(search.value.toLowerCase())) return
+        el.insertAdjacentHTML('beforeend',`
+            <div class="item">
+                <div class="item__photo" style="background-image:url(${element.image_url})"></div>
+                <div class="item__info">
+                    <div class="item__info__left">
+                        <div class="item__info__left__name">
+                            <h5>${element.name}</h5>
+                            <p>${element.description}</p>
+                        </div>
+                        <div class="item__info__left__author">
+                            ${element.author}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `)
+    })
+})
