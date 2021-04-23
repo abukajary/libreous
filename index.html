@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,100 +8,132 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
-<div class="profile">
-    <div class="unLogged">
-        <div class="profile__mid">
-            <p id="user_logIn">Log In</p>
-            <p id="user_register">Register </p>
+<body>
+<nav class="menu">
+    <div class="wrapper-row">
+        <div class="menu__logo"><a href="">Libreous</a></div>
+        <div class="menu__misc">
+            <div class="menu__misc__searchLabel">
+                <input type="text" placeholder="Search by book name or its author" name="searchLabel" id="searchLabel">
+                <button type="submit" name="searchBtn" id="searchBtn">Search</button>
+            </div>
+            <div class="menu__misc__links">
+                <i class="far fa-user-circle" id="profileBtn"></i>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+        <div class="mobile_menu"><i class="fa fa-bars" aria-hidden="true" id="mob_menu"></i></div>
+    </div>
+</nav>
+<div class="wrapper-col">
+    <div class="offer">
+        <div class="offer__text">
+            <div class="helper">
+                <p class="text__title">Subscription 9$ per/month</p>
+                <div class="text__description">
+                    <p>Read books Online, Offline</p>
+                    <p>EVERYWHERE</p>
+                    <p>for only 9$ per/month</p>
+                </div>
+                <button type="button">More</button>
+            </div>
+        </div>
+        <div class="offer__img">
+            <img src="img/ad_img.png" alt="">
         </div>
     </div>
+    <div class="book_shelf">
+        <p class="text__title">Top month!</p>
+        <p class="text__description">Mostly interesting books this month</p>
+        <div class="showcase">
+            <div class="slider swiper-container">
+                <div class="swiper-wrapper">
 
-    <div class="profile__start">
-        <p id="user_name">ABUBAKIR JARYLGAPOV</p>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
     </div>
-    <div class="profile__mid">
-        <p id="user_balance">Balance: 0$</p>
-        <p>Settings</p>
-        <p>History</p>
-        <p>Promo code</p>
-        <a href="admin.html">Admin Panel</a>
+    <div class="book_shelf">
+        <p class="text__title">New books!</p>
+        <p class="text__description">Read newest books</p>
+        <div class="showcase">
+            <div class="slider swiper-container">
+                <div class="swiper-wrapper">
+
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
     </div>
-    <div class="profile__end">
-        <p id="close">Close</p>
-        <p id="user_logOut"></p>
+    <div class="book_shelf">
+        <p class="text__title">Top month!</p>
+        <p class="text__description">Mostly interesting books this month</p>
+        <div class="showcase">
+            <div class="slider swiper-container">
+                <div class="swiper-wrapper">
+
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
     </div>
 </div>
-<body>
-    <div class="menu">
-        <div class="menu__logo"><a href="index.html">Libreous</a></div>
-        <div class="menu__misc">
-            <i class="far fa-user-circle" id="profileBtn"></i>
-            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+<div class="libreous_app">
+    <div class="text__title"><h3>Read anytime, everywhere with our Libreous App!</h3></div>
+    <img src="img/mobile_app.png" alt="">
+</div>
+<footer>
+    <div class="text__block">
+        <div class="text__title">О проекте Libreous</div>
+        <div class="text__description">
+            <p>О проекте</p>
+            <p>Правообладатели</p>
+            <p>Информация</p>
+            <p>Сотрудничество</p>
         </div>
     </div>
-
-    <div class="search">
-        <div class="search__area">
-            <input placeholder="Search by book name or it`s author" id="searchLabel" type="search">
-            <input id="searchBtn" type="submit" value="Search">
+    <div class="text__block">
+        <div class="text__title">Покупка продуктов</div>
+        <div class="text__description">
+            <p>Купить книгу</p>
+            <p>Подарить книгу</p>
+            <p>Как оплатить</p>
+            <p>Помощь</p>
         </div>
     </div>
-
-    <div class="wrapper">
-        <div class="wrapper">
-            <div class="quote">
-                <blockquote>
-                    If you don’t like to read, you haven’t found the right book
-                </blockquote>
-                <div class="quote__author">
-                    <p>&mdash; J.K. Rowling,</p> <cite><a href="" class="hover_underline">Learn more</a></cite>
-                </div>
-            </div>
-        </div>
-        <div class="showcase">
-            <h1 class="text_title">Top month</h1>
-            <p class="text_description">Users favourite books this month</p>
-            <div class="slider swiper-container">
-                <div class="swiper-wrapper">
-                    
-                </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-scrollbar"></div>
-            </div>
-        </div>
-        <div class="showcase">
-            <h1 class="text_title">New books</h1>
-            <p class="text_description">Read newest books!</p>
-            <div class="slider swiper-container">
-                <div class="swiper-wrapper">
-                    
-                </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-scrollbar"></div>
-            </div>
-        </div>
-        <div class="showcase">
-            <h1 class="text_title">Must to read</h1>
-            <p class="text_description">Every book reader must to read</p>
-            <div class="slider swiper-container">
-                <div class="swiper-wrapper">
-                    
-                </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-scrollbar"></div>
-            </div>
+    <div class="text__block">
+        <div class="text__title">Скачать приложение</div>
+        <div class="text__description">
+            <p>Android</p>
+            <p>iOS</p>
+            <p>О приложении</p>
+            <p>Системные требования</p>
         </div>
     </div>
-    <div class="block">
-
+    <div class="text__block">
+        <div class="text__title">Следите за нами!</div>
+        <div class="text__description">
+            <p>Instagram</p>
+            <p>Telegram</p>
+            <p>VK</p>
+            <p>Facebook</p>
+        </div>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+</footer>
 
-    <script src="js/main.js"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
